@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#first {
+    margin-top: 5%;
+    background-color: blueviolet;
+}
+
+#profile-pic {
+    display: flex;
+    justify-content: center;
+}
+
+#picture{
+
+    width: 250px;
+    height: 250px;
+    padding: 5%;
+    border-radius: 50%;
+}
+
+#about-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#about-paragraph{
+    padding: 3%;
+    text-align: justify;
+}
