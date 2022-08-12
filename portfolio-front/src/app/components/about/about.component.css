@@ -27,7 +27,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
+
 
 #about-paragraph{
     padding: 3%;

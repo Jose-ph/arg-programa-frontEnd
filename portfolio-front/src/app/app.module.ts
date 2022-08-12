@@ -8,6 +8,7 @@ import { LogoProgComponent } from './components/logo-prog/logo-prog.component';
 import { SocialComponent } from './components/social/social.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutComponent } from './components/about/about.component';
     LogoProgComponent,
     SocialComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
