@@ -1,0 +1,22 @@
+
+#logo-arg{
+
+    display: inline-block;
+
+   width: 80%;
+   height: 100%;
+    background-color: blueviolet;
+    margin-right: 25%;
+}
+
+#logo-arg img{
+
+ /*    width: 25%;
+    height: 25%;
+    
+ */
+
+    width: 50%;
+    height: 50%;
+
+}
