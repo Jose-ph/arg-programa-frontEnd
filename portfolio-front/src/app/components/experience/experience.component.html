@@ -4,20 +4,26 @@
     <h2>Experiencia Laboral</h2>
 
     <div class="row">
+        <div class="col-2">
+            <!-- Agregar en button *ngIf="isLogged" cunado tenga token para que funcione al logearse -->
+            <button class="btn btn-info" routerLink="/nuevaexperiencia"   >Agregar experiencia </button>
+        </div>
+        <div class="col-10">
 
-        <div class="col-12">
-
-            <ul>
+            <ul *ngFor="let Experiencia of experiencia">
                 <li>
-                    <h3>Encargado de Comercio - (years)</h3>
+                    <h3>{{Experiencia.nombreExperiencia}}</h3>
+               
+                <p>{{Experiencia.descripcionExperiencia}}</p>
+                    <button class="btn btn-success">EDITAR</button>
+                    <button class="btn btn-warning">BORRAR</button>
                 </li>
-                <p>Atención al público,
-                    manejo de caja, atención a proveedores, control de facturación y
-                    otras funciones administrativas</p>
-                <li>
+                <!-- <li>
                     <h3>Tutor CoderHouse - (years) </h3>
                 </li>
                 <p>Me desempeño como tutor de Desarrollo Web pudiendo además ser tutor de cursos como Javascript y React.</p>
+                <button class="btn btn-success">EDITAR</button>
+                    <button class="btn btn-warning">BORRAR</button> -->
             </ul>
 
         </div>
