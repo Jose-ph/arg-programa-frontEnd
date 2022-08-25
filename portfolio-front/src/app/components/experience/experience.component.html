@@ -15,8 +15,9 @@
                     <h3>{{Experiencia.nombreExperiencia}}</h3>
                
                 <p>{{Experiencia.descripcionExperiencia}}</p>
-                    <button class="btn btn-success">EDITAR</button>
-                    <button class="btn btn-warning">BORRAR</button>
+                <!-- Agergar *ngIf="isLogged"  cuando tenga token-->
+                    <button class="btn btn-success" routerLink="/editarExperiencia/{{Experiencia.id}}"><i class="bi bi-pencil"></i>EDITAR</button>
+                    <button class="btn btn-warning" (click)="delete(Experiencia.id)" ><i class="bi bi-trash"></i>BORRAR</button>
                 </li>
                 <!-- <li>
                     <h3>Tutor CoderHouse - (years) </h3>

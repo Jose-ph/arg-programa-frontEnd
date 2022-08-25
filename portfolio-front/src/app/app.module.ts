@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/experience/new-experience.component';
+import { EditarExperienciaComponent } from './components/experience/editar-experiencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    NewExperienceComponent
+    NewExperienceComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule,
