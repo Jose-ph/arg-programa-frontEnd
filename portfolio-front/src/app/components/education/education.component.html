@@ -4,22 +4,27 @@
     <h2>Educación</h2>
 
     <div class="row">
+        <div class="col-2">
+            <!-- Agregar en button *ngIf="isLogged" cunado tenga token para que funcione al logearse -->
+            <button class="btn btn-info" routerLink="/nuevaeducacion"   >Agregar educación </button>
+        </div>
+        <div class="col-10">
 
-        <div class="col-12">
-
-            <ul>
+            <ul *ngFor="let Educacion of educacion">
                 <li>
-                    <h3>Ing en informática - (years)</h3>
+                    <h3>{{Educacion.nombreEducacion}}</h3>
+               
+                <p>{{Educacion.descripcionEducacion}}</p>
+                <!-- Agergar *ngIf="isLogged"  cuando tenga token-->
+                    <button class="btn btn-success" routerLink="/editarEducacion/{{Educacion.id}}"><i class="bi bi-pencil"></i>EDITAR</button>
+                    <button class="btn btn-warning" (click)="delete(Educacion.id)" ><i class="bi bi-trash"></i>BORRAR</button>
                 </li>
-                <p>Universidad Nacional Arturo Jauretche</p>
-                <li>
-                    <h3>Carrera de desarrollo front end</h3>
+                <!-- <li>
+                    <h3>Tutor CoderHouse - (years) </h3>
                 </li>
-                <p>Coderhouse</p>
-                <li>
-                    <h3>Lic en comercio exterior</h3>
-                </li>
-                <p>Universidad Nacional de Quilmes</p>
+                <p>Me desempeño como tutor de Desarrollo Web pudiendo además ser tutor de cursos como Javascript y React.</p>
+                <button class="btn btn-success">EDITAR</button>
+                    <button class="btn btn-warning">BORRAR</button> -->
             </ul>
 
         </div>
