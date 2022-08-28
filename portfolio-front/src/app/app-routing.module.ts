@@ -7,7 +7,8 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
-const routes: Routes = [{path:'',component: HomeComponent},{path:'login', component: LoginComponent},
+const routes: Routes = [{path:'',component: HomeComponent},
+{path:'login', component: LoginComponent},
 {path:'nuevaexperiencia', component: NewExperienceComponent},
 {path:'editarExperiencia/:id', component: EditarExperienciaComponent},
 {path:'nuevaeducacion', component: NewEducacionComponent},
