@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-education',
@@ -11,20 +12,20 @@ export class EducationComponent implements OnInit {
   educacion: Educacion[] = [];
 
   //AGREGAR EN EL CONSTRUCTOR private:tokenService: TokenService
-  constructor(private educacionService: EducacionService) { }
+  constructor(private educacionService: EducacionService, private tokenService: TokenService) { }
 
   
-    //isLogged = false;
+    isLogged = false;
 
   ngOnInit(): void {
     this.cargarEducacion();
-    //Estp agregarlo con el token para validar
-    // if(this.tokenService.getToken()){
+ 
+    if(this.tokenService.getToken()){
 
-    //   this.isLogged = true;
-    // }else{
-    //   this.isLogged = false;
-    // }
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
   }
 
   cargarEducacion(): void {
@@ -37,7 +38,7 @@ export class EducationComponent implements OnInit {
         data =>{
           this.cargarEducacion();
         }, error =>{
-          alert("Error: no se puedo borrar la experiencia");
+          alert("Error: no se puedo borrar la educación");
         }
       )
     }

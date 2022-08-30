@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-2">
             <!-- Agregar en button *ngIf="isLogged" cunado tenga token para que funcione al logearse -->
-            <button class="btn btn-info" routerLink="/nuevaexperiencia"   >Agregar experiencia </button>
+            <button class="btn btn-info" routerLink="/nuevaexperiencia" *ngIf="isLogged"   >Agregar experiencia </button>
         </div>
         <div class="col-10">
 
@@ -16,8 +16,8 @@
                
                 <p>{{Experiencia.descripcionExperiencia}}</p>
                 <!-- Agergar *ngIf="isLogged"  cuando tenga token-->
-                    <button class="btn btn-success" routerLink="/editarExperiencia/{{Experiencia.id}}"><i class="bi bi-pencil"></i>EDITAR</button>
-                    <button class="btn btn-warning" (click)="delete(Experiencia.id)" ><i class="bi bi-trash"></i>BORRAR</button>
+                    <button  *ngIf="isLogged" class="btn btn-success" routerLink="/editarExperiencia/{{Experiencia.id}}"><i class="bi bi-pencil"></i>EDITAR</button>
+                    <button   *ngIf="isLogged" class="btn btn-warning" (click)="delete(Experiencia.id)" ><i class="bi bi-trash"></i>BORRAR</button>
                 </li>
                 <!-- <li>
                     <h3>Tutor CoderHouse - (years) </h3>
