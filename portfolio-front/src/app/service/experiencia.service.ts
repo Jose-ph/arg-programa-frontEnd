@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaService {
 
-  experienciaURL = "http://localhost:8080/experienciaLaboral/"
+  experienciaURL = " https://backendportfolioargprograma.herokuapp.com/experienciaLaboral/"
   constructor(private HttpClient: HttpClient) { }
   public lista(): Observable<Experiencia[]>{
 
